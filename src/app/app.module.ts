@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TourPage } from '../pages/tours/tour';
+import { GoTourPage } from '../pages/goTour/goTour';
 
 import {TourService} from '../service/tourService';
 import { HttpModule} from '@angular/http';
@@ -21,7 +22,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    TourPage
+    TourPage, 
+    GoTourPage
   ],
   imports: [
     BrowserModule, HttpModule, 
@@ -33,7 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage, TourPage
+    TabsPage, TourPage, GoTourPage
   ],
   providers: [
     StatusBar,
@@ -41,4 +43,5 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {}
