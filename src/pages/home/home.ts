@@ -20,7 +20,6 @@ export class HomePage {
 
     let loadingUI = this.loader.create({ content: 'Starting tour ...' });
     //loadingUI.present();
-
     //this.service.getFeed().then(data => {
     //  this.data = data.feed;
         //loadingUI.dismiss();

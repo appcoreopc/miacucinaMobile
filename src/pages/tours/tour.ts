@@ -2,6 +2,16 @@ import { Component } from '@angular/core';
 import {TourService} from '../../service/tourService';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker
+ } from '@ionic-native/google-maps';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'tour.html',  
