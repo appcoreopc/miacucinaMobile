@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import {TourService} from '../../service/tourService';
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
-import { TourPage } from '../../pages/tours/tour';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html', 
+  templateUrl: 'tour.html',  
   providers: [TourService]
 })
-export class HomePage {
+export class TourPage {
   data : any; 
   
   countryData : any; 
@@ -25,11 +24,14 @@ export class HomePage {
     //  this.data = data.feed;
         //loadingUI.dismiss();
     //});
-  }
+    }
+
+  
 
   loadTour(evt)
-  {       
-    this.navCtrl.push(TourPage);
+  {
+   
+    this.navCtrl.push('');
     
     // let alert = this.alertCtrl.create({
     //   title: 'Low battery',
