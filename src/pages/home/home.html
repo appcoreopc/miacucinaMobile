@@ -17,22 +17,34 @@
   </p>
 
   <p>
-
     <ion-list>
       <ion-item>
-        <ion-label>Gaming</ion-label>
-        <ion-select [(ngModel)]="gaming" interface="action-sheet">
-          <ion-option value="nes">NES</ion-option>
-          <ion-option value="n64">Nintendo64</ion-option>
+        <ion-label>Country</ion-label>
+        <ion-select [(ngModel)]="countryData" interface="action-sheet">
+          <ion-option value="nes">Auckland</ion-option>
+          <ion-option value="n64">Auckland</ion-option>
           <ion-option value="ps">PlayStation</ion-option>
           <ion-option value="genesis">Sega Genesis</ion-option>
           <ion-option value="saturn">Sega Saturn</ion-option>
           <ion-option value="snes">SNES</ion-option>
         </ion-select>
       </ion-item>
-    </ion-list>
-
-    
+    </ion-list>   
+  </p>    
+  <p>
+    <ion-list>
+      <ion-item>
+        <ion-label>City</ion-label>
+        <ion-select (ionChange)="loadTour($event);" interface="action-sheet">
+          <ion-option value="nes">Auckland</ion-option>
+          <ion-option value="n64">Auckland</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+          <ion-option value="genesis">Sega Genesis</ion-option>
+          <ion-option value="saturn">Sega Saturn</ion-option>
+          <ion-option value="snes">SNES</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>   
   </p>
     
 </ion-content>
