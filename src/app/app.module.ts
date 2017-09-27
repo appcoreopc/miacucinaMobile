@@ -10,10 +10,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { TourPage } from '../pages/tours/tour';
 import { GoTourPage } from '../pages/goTour/goTour';
 
-import {TourService} from '../service/tourService';
+import { TourService } from '../service/tourService';
+
+import { PaymentService } from '../service/paymentService';
+
 import { HttpModule} from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    PayPal,
+    SplashScreen, 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
