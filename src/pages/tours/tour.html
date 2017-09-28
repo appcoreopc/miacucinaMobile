@@ -4,10 +4,12 @@
   </ion-navbar>
 </ion-header>
 
-<h2>cool tour awaits </h2> 
-<button ion-button (click)="purchaseTour($event)">Pay with Paypal</button>
 
 <ion-content>
+    <h2>cool tour awaits </h2> 
+    <button ion-button (click)="purchaseTour($event)">Pay with Paypal</button>
+
+
   <ion-card *ngFor="let item of data">
     <img src="{{item.urlToImage}}"/>
     <div class="card-title">{{item.description}}</div>
