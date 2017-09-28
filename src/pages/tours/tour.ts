@@ -22,17 +22,13 @@ import {  GoogleMaps,  GoogleMap,  GoogleMapsEvent,  GoogleMapOptions,  CameraPo
         let loadingUI = this.loader.create({ content: 'Starting tour ...' });
         loadingUI.present();
         this.service.getFeed().then(data => {
-          this.data = data.feed;
+          this.data = data.articles;          
           loadingUI.dismiss();
         });
-      }
-
-      
+      }     
       
       loadTour(evt)
-      {      
-        
-        
+      {                      
         this.navCtrl.push('');
         
         // let alert = this.alertCtrl.create({
