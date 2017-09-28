@@ -20,12 +20,14 @@ import {  GoogleMaps,  GoogleMap,  GoogleMapsEvent,  GoogleMapOptions,  CameraPo
       private alertCtrl: AlertController, private paymentService: PaymentService ) {
         
         let loadingUI = this.loader.create({ content: 'Starting tour ...' });
-        //loadingUI.present();
-        //this.service.getFeed().then(data => {
-        //  this.data = data.feed;
-        //loadingUI.dismiss();
-        //});
+        loadingUI.present();
+        this.service.getFeed().then(data => {
+          this.data = data.feed;
+          loadingUI.dismiss();
+        });
       }
+
+      
       
       loadTour(evt)
       {      
@@ -44,7 +46,7 @@ import {  GoogleMaps,  GoogleMap,  GoogleMapsEvent,  GoogleMapOptions,  CameraPo
       purchaseTour()
       {                
         console.log('purchasing tour!!')
-       // this.paymentService.payTour();    
+        this.paymentService.payTour();    
         console.log('paid!')    
       }
       

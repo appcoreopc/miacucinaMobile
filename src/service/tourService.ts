@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class TourService {
   _http: Http
   _data: any;
-  _apiUrl: string = "http://104.197.151.41/blog/public/api/job/feed";
+  _apiUrl: string = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=b291bfd938fc48aaa91e5e8b42e862b1";
   _url: string;
 
   constructor(public http: Http) {
