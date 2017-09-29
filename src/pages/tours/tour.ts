@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { TourService } from '../../service/tourService';
 import { PaymentService } from '../../service/paymentService';
+import { TourLocationService } from '../../service/tourLocationService';
+
 import { NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import {  GoogleMaps,  GoogleMap,  GoogleMapsEvent,  GoogleMapOptions,  CameraPosition,
   MarkerOptions, Marker } from '@ionic-native/google-maps';
@@ -8,7 +10,7 @@ import {  GoogleMaps,  GoogleMap,  GoogleMapsEvent,  GoogleMapOptions,  CameraPo
   @Component({
     selector: 'page-home',
     templateUrl: 'tour.html',  
-    providers: [TourService, PaymentService]
+    providers: [TourService, PaymentService, TourLocationService]
   })
   export class TourPage {
     data : any;     

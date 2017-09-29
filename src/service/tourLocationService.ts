@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
+
 @Injectable()
-export class TourService {
+export class TourLocationService {
   _http: Http
   _data: any;
   _apiUrl: string = "https://newsapi.org/v1/articles?source=techcrunch&apiKey=b291bfd938fc48aaa91e5e8b42e862b1";
@@ -14,7 +15,7 @@ export class TourService {
     this._http = http;
   }
 
-  getFeed() {
+  getData() {
     if (this._data) {
       return Promise.resolve(this._data);
     }
