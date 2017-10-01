@@ -9,10 +9,12 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TourPage } from '../pages/tours/tour';
 import { GoTourPage } from '../pages/goTour/goTour';
+import { RegisterPage } from '../pages/register/register';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
 import { TourService } from '../service/tourService';
-
 import { PaymentService } from '../service/paymentService';
+import { TourLocationService } from '../service/tourLocationService';
 
 import { HttpModule} from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -27,7 +29,7 @@ import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal
     HomePage,
     TabsPage,
     TourPage, 
-    GoTourPage
+    GoTourPage, RegisterPage, FeedbackPage
   ],
   imports: [
     BrowserModule, HttpModule, 
@@ -39,7 +41,7 @@ import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage, TourPage, GoTourPage
+    TabsPage, TourPage, GoTourPage, RegisterPage, FeedbackPage
   ],
   providers: [
     StatusBar,
